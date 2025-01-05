@@ -1,10 +1,17 @@
 import { Button } from "@/components/ui/button"
+import { useEffect } from "react"
 import { useTranslation } from "react-i18next"
 import { useNavigate } from "react-router-dom"
 
 export default function NotFound() {
   const navigate = useNavigate()
   const { t } = useTranslation()
+
+  useEffect(() => {
+    if (window.location.pathname !== "/404") {
+      window.location.href = "/404";
+    }
+  }, []);
 
   return (
     <div className="flex  flex-col items-center justify-center">
