@@ -54,7 +54,7 @@ function Header() {
   }, [customLogo])
 
   useEffect(() => {
-    document.title = siteName || "哪吒监控 Nezha Monitoring"
+    document.title = siteName || "Server Status"
   }, [siteName])
 
   return (
